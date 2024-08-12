@@ -6,8 +6,8 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/erkindilekci/debt-dash/internal/db"
-	"github.com/erkindilekci/debt-dash/internal/routes"
+	"github.com/erkindilekci/debt-dash/pkg/db"
+	"github.com/erkindilekci/debt-dash/pkg/routes"
 )
 
 func main() {

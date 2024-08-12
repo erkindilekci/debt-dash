@@ -7,9 +7,9 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/erkindilekci/debt-dash/internal/db"
-	"github.com/erkindilekci/debt-dash/internal/models"
-	"github.com/erkindilekci/debt-dash/internal/render"
+	"github.com/erkindilekci/debt-dash/pkg/db"
+	"github.com/erkindilekci/debt-dash/pkg/models"
+	"github.com/erkindilekci/debt-dash/pkg/render"
 )
 
 func GetAllCards(w http.ResponseWriter, r *http.Request) {

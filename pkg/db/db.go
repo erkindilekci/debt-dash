@@ -3,7 +3,7 @@ package db
 import (
 	"database/sql"
 	"fmt"
-	"github.com/erkindilekci/debt-dash/internal/models"
+	"github.com/erkindilekci/debt-dash/pkg/models"
 	_ "github.com/lib/pq"
 )
 

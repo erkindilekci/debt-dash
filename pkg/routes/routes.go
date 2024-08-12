@@ -5,7 +5,7 @@ import (
 	"github.com/go-chi/chi/v5/middleware"
 	"net/http"
 
-	"github.com/erkindilekci/debt-dash/internal/handlers"
+	"github.com/erkindilekci/debt-dash/pkg/handlers"
 )
 
 func Routes() *chi.Mux {
