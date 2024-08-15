@@ -1,15 +1,14 @@
-FROM golang:1.22.6
+FROM golang:1.22.6 AS builder
+
+WORKDIR /build
+COPY . .
+RUN go mod download
+RUN go build -o ./debtdash cmd/web/main.go
+
+FROM gcr.io/distroless/base-debian12
 
 WORKDIR /app
-
-COPY go.mod go.sum ./
-
-RUN go mod download
-
-COPY . .
-
-RUN go build -o main cmd/web/main.go
-
-EXPOSE 8080
-
-CMD ["./main"]
+COPY --from=builder /build/debtdash ./debtdash
+COPY --from=builder /build/templates ./templates
+COPY --from=builder /build/static ./static
+CMD ["/app/debtdash"]
